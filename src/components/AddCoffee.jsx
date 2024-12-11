@@ -56,7 +56,7 @@ const AddCoffee = () => {
                 <NavLink to='/'>Back to home</NavLink>
             </div>
             <div className='text-center lg:px-28 py-16 rounded-md bg-[#F4F3F0]  mt-12 mb-28'>
-                <h2 className='text-3xl lg:text-5xl font-normal' >Add New Coffee</h2>
+                <h2 className='text-3xl lg:text-5xl font-normal font-rancho' >Add New Coffee</h2>
                 <p className='my-8 mx-2'>Seamlessly expand your coffee selection with our easy-to-use interface. Input essential details such as coffee name, quantity, supplier, taste profile, category, and additional information. Keep your coffee shop's offerings fresh and exciting by introducing new flavors and varieties, ensuring your customers always have something new to enjoy.</p>
 
                 <form onSubmit={handleAddCoffee} >

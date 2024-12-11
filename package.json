@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/raleway": "^5.1.0",
+    "@fontsource/rancho": "^5.1.0",
     "localforage": "^1.10.0",
     "match-sorter": "^8.0.0",
     "react": "^18.3.1",

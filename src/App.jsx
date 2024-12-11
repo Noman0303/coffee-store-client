@@ -2,6 +2,11 @@ import { NavLink, useLoaderData } from 'react-router-dom'
 import './App.css'
 import CoffeeCard from './components/coffeeCard';
 import { useState } from 'react';
+import '@fontsource/raleway';
+import '@fontsource/rancho';
+import Header from './components/Header';
+import Banner from './components/Banner';
+import About from './components/About';
 
 function App() {
 
@@ -11,8 +16,11 @@ function App() {
 
 
   return (
-    
+      
       <div className='text-center'>
+        <Header></Header>
+        <Banner></Banner>
+        <About></About>
         <p>--- Sip & Savor ---</p>
         <h1 className='text-6xl '>Our Popular Products</h1>
         <p className='py-2'>Total Number of Coffees : {coffees.length}</p>
