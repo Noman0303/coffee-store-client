@@ -4,8 +4,9 @@ import Swal from 'sweetalert2'
 import { IoEye } from "react-icons/io5";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
-const CoffeeCard = ({ coffee }) => {
+const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
 
     const { name, quantity, supplier, taste, category, details, photo, _id } = coffee;
 
@@ -35,6 +36,9 @@ const CoffeeCard = ({ coffee }) => {
                                 text: "Your Coffee has been deleted.",
                                 icon: "success"
                             });
+
+                            const remaining = coffees.filter (cof => cof._id !== _id)
+                            setCoffees(remaining);
                         }
                     })
             }
@@ -57,9 +61,17 @@ const CoffeeCard = ({ coffee }) => {
                     </div>
 
                     <div className="flex flex-col gap-2">
+
                         <button className='bg-[#D2B48C] p-2 rounded-md'><IoEye className='text-white' /></button>
-                        <button className="bg-[#3C393B] p-2 rounded-md"><MdEdit className='text-white' /></button>
-                        <button className="bg-[#EA4744] p-2 rounded-md" onClick={() => handleDelete(_id)}><MdDelete className='text-white' /></button>
+
+                        <Link to={`updateCoffee/${_id}`}>
+                            <button className="bg-[#3C393B] p-2 rounded-md"><MdEdit className='text-white' /></button>
+                        </Link>
+
+                        <button className="bg-[#EA4744] p-2 rounded-md" onClick={() => handleDelete(_id)}>
+                            <MdDelete className='text-white' />
+                        </button>
+
                     </div>
                 </div>
             </div>

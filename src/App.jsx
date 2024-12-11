@@ -1,10 +1,12 @@
 import { NavLink, useLoaderData } from 'react-router-dom'
 import './App.css'
 import CoffeeCard from './components/coffeeCard';
+import { useState } from 'react';
 
 function App() {
 
-  const coffees = useLoaderData();
+  const loadedcoffees = useLoaderData();
+  const[coffees,setCoffees]=useState(loadedcoffees);
 
 
 
@@ -23,6 +25,8 @@ function App() {
             coffees.map(coffee => <CoffeeCard
               key={coffee._id}
               coffee={coffee}
+              coffees ={coffees}
+              setCoffees = {setCoffees}
             ></CoffeeCard>)
           }
         </div>

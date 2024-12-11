@@ -37,7 +37,7 @@ const AddCoffee = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'User Added Successfully',
+                        text: 'Coffee Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
@@ -57,7 +57,7 @@ const AddCoffee = () => {
             </div>
             <div className='text-center lg:px-28 py-16 rounded-md bg-[#F4F3F0]  mt-12 mb-28'>
                 <h2 className='text-3xl lg:text-5xl font-normal' >Add New Coffee</h2>
-                <p className='my-8 mx-2'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
+                <p className='my-8 mx-2'>Seamlessly expand your coffee selection with our easy-to-use interface. Input essential details such as coffee name, quantity, supplier, taste profile, category, and additional information. Keep your coffee shop's offerings fresh and exciting by introducing new flavors and varieties, ensuring your customers always have something new to enjoy.</p>
 
                 <form onSubmit={handleAddCoffee} >
 
