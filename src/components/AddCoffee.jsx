@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import Header from './Header'
 
 const AddCoffee = () => {
 
@@ -23,7 +24,7 @@ const AddCoffee = () => {
 
         // send data to the server
 
-        fetch('http://localhost:5000/coffee', {
+        fetch('https://coffee-store-server-ten-psi.vercel.app/coffee', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -52,6 +53,7 @@ const AddCoffee = () => {
 
     return (
         <div className='max-w-7xl mx-auto'>
+            <Header></Header>
             <div className='mt-12 mx-2'>
                 <NavLink to='/'>Back to home</NavLink>
             </div>
@@ -84,7 +86,7 @@ const AddCoffee = () => {
 
                             <label className="form-control w-full ">
                                 <span className="label label-text">Quantity</span>
-                                <input type="text" name="quantity" placeholder="Enter Coffee chef" className="input input-bordered w-full " />
+                                <input type="text" name="quantity" placeholder="Enter Coffee Quantity" className="input input-bordered w-full " />
                             </label>
 
 
@@ -108,7 +110,7 @@ const AddCoffee = () => {
                             </label>
                         </div>
 
-                        <input className='col-span-2 text-center border-black border-2 bg-[#D2B48C] rounded-md py-3 my-4 w-full' type="submit" value="Add Coffee" />
+                        <input className='col-span-2 text-center border-black border-2 bg-[#D2B48C] rounded-md py-3 my-4 w-full btn' type="submit" value="Add Coffee" />
 
 
                     </div>

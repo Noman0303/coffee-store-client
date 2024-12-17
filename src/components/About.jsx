@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='flex lg:flex justify-evenly p-4 lg:py-14 lg:px-64 gap-8 bg-[#ECEAE3]'>
+    <div className='flex flex-col md:flex-row lg:flex-row justify-evenly p-4 lg:py-14 px-auto gap-8 bg-[#ECEAE3]'>
         <div className='justify-start text-left'>
             <img src="https://i.ibb.co.com/59KfMD2/1.png" alt="" />
             <h2 className='font-rancho text-3xl font-normal mt-4'>Awesome Aroma</h2>
