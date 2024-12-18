@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/raleway": "^5.1.0",
     "@fontsource/rancho": "^5.1.0",
+    "dotenv": "^16.4.7",
     "firebase": "^11.0.2",
     "localforage": "^1.10.0",
     "match-sorter": "^8.0.0",
